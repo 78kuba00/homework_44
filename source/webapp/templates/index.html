@@ -10,9 +10,16 @@
 
     Enter numbers splitted by space: <input type="text" name="numbers"/><br>
     <div class="input-group">
-        <input type="submit" value="Calculate">
+        <input type="submit" value="Guess!!!">
     </div>
 </form>
-Result : {{ message }}
+<br>
+{% if result is not None %}
+    {% if result == 'success' %}
+        Result : {{ message }}
+    {% else %}
+        Error : {{ message }}
+    {% endif %}
+{% endif %}
 </body>
 </html>
