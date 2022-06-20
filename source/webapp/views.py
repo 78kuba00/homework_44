@@ -35,3 +35,6 @@ def play(request):
             }
 
     return render(request, 'index.html', context)
+
+def history(request):
+    return render(request, 'history.html', {})
